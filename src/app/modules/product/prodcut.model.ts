@@ -30,10 +30,6 @@ const VideoSchema = new mongoose.Schema<TImageAsset>(
     secure_url: {
       type: String,
       required: true
-    },
-    optimizeUrl: {
-      type: String,
-      required: true
     }
   },
   {

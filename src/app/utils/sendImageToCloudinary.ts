@@ -25,10 +25,13 @@ export const sendImageToCloudinary = async (
     })
 
     // Optimize delivery by resizing and applying auto-format and auto-quality
-    const optimizeUrl = cloudinary.url(fileName, {
-      fetch_format: 'auto',
-      quality: 'auto'
-    })
+    let optimizeUrl = ''
+    if (resource_type === 'image') {
+      optimizeUrl = cloudinary.url(fileName, {
+        fetch_format: 'auto',
+        quality: 'auto'
+      })
+    }
 
     //remove the local file after upload.
     fs.unlink(path, (err: any) => {

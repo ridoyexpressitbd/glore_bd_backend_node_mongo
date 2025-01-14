@@ -39,7 +39,6 @@ const createProdcutIntoDB = async (files: any, payload: TProduct) => {
   const video: Partial<TImageAsset> = {}
   if (videoFile) {
     video.secure_url = videoFile.secure_url as string
-    video.optimizeUrl = videoFile.optimizeUrl as string
     video.public_id = videoFile.public_id as string
   }
 
