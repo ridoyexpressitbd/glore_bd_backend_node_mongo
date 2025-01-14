@@ -10,6 +10,8 @@ const getAllProductsFromDB = async () => {
   const result = await Product.find().populate('category', 'name')
   return result
 }
+
+// create a product
 const createProdcutIntoDB = async (files: any, payload: TProduct) => {
   const isCategoryExist = await Category.findById(payload.category)
   if (!isCategoryExist) {
