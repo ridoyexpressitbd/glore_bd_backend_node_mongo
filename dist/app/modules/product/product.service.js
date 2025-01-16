@@ -42,7 +42,6 @@ const createProdcutIntoDB = (files, payload) => __awaiter(void 0, void 0, void 0
     const video = {};
     if (videoFile) {
         video.secure_url = videoFile.secure_url;
-        video.optimizeUrl = videoFile.optimizeUrl;
         video.public_id = videoFile.public_id;
     }
     payload.images = images;

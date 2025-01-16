@@ -33,10 +33,13 @@ const sendImageToCloudinary = (fileName_1, path_1, ...args_1) => __awaiter(void 
             resource_type
         });
         // Optimize delivery by resizing and applying auto-format and auto-quality
-        const optimizeUrl = cloudinary_1.v2.url(fileName, {
-            fetch_format: 'auto',
-            quality: 'auto'
-        });
+        let optimizeUrl = '';
+        if (resource_type === 'image') {
+            optimizeUrl = cloudinary_1.v2.url(fileName, {
+                fetch_format: 'auto',
+                quality: 'auto'
+            });
+        }
         //remove the local file after upload.
         fs_1.default.unlink(path, (err) => {
             if (err) {

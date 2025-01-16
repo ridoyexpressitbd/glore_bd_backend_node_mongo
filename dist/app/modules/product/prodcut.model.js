@@ -29,10 +29,6 @@ const VideoSchema = new mongoose_1.default.Schema({
     secure_url: {
         type: String,
         required: true
-    },
-    optimizeUrl: {
-        type: String,
-        required: true
     }
 }, {
     _id: false
