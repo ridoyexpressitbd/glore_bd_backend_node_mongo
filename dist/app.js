@@ -16,7 +16,8 @@ app.use((0, cors_1.default)({
     origin: [
         'http://localhost:5173',
         'http://localhost:3000',
-        'https://glore-bd-frontend-node-mongo.vercel.app'
+        'https://glore-bd-frontend-node-mongo.vercel.app',
+        'https://new.glorebd.com'
     ],
     credentials: true
 }));
