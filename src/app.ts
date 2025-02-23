@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(
   cors({
-    origin: ['https://expressitbd-frontend-task.vercel.app'],
+    origin: ["https://expressitbd-frontend-task.vercel.app", "*"],
     credentials: true
   })
 )
